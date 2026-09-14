@@ -18,6 +18,7 @@
 <defs>
 <linearGradient id="sky" x2="0" y2="1"><stop stop-color="var(--sky-top)"/><stop offset="1" stop-color="var(--sky-bottom)"/></linearGradient>
 <radialGradient id="skyGlow" cx="50%" cy="34%" r="70%"><stop stop-color="var(--sky-glow)"/><stop offset=".56" stop-color="var(--sky-bottom)" stop-opacity=".28"/><stop offset="1" stop-color="var(--sky-bottom)" stop-opacity="0"/></radialGradient>
+<linearGradient id="lampCone" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--window)" stop-opacity=".46"/><stop offset="1" stop-color="var(--window)" stop-opacity="0"/></linearGradient>
 <pattern id="brick" width="42" height="22" patternUnits="userSpaceOnUse"><path d="M0 21h42M21 0v10M0 10h42M10 10v11M32 10v11" fill="none" stroke="var(--brick-line)" stroke-width="2"/></pattern>
 <pattern id="siding" width="12" height="22" patternUnits="userSpaceOnUse"><path d="M0 21h12" stroke="var(--siding-line)" stroke-width="2"/></pattern>
 <g id="square-window"><path d="M0 0h74v82H0Z" fill="var(--window-frame)"/><path d="M8 8h58v66H8Z" fill="var(--window-cyan)"/><path d="M37 8v66M8 41h58" stroke="var(--window-cross)" stroke-width="5"/></g>
@@ -29,27 +30,39 @@
 <path class="sky-base" fill="url(#sky)" d="M0 0h1440v710H0Z"/>
 <path class="sky-light" fill="url(#skyGlow)" d="M0 0h1440v710H0Z" opacity=".82"/>
 <circle class="celestial" cx="1127" cy="170" r="43"/>
-<g class="stars" fill="var(--star)"><circle cx="104" cy="142" r="2"/><circle cx="272" cy="212" r="1.5"/><circle cx="1018" cy="105" r="2"/><circle cx="1321" cy="226" r="2"/><path d="m1272 111 2-7 2 7 7 2-7 2-2 7-2-7-7-2Z"/></g>
+<g class="stars" fill="var(--star)">
+<circle class="star" cx="58" cy="82" r="2"/><circle class="star" cx="104" cy="142" r="2.5"/><circle class="star" cx="196" cy="101" r="1.5"/><circle class="star" cx="272" cy="212" r="2"/><circle class="star" cx="371" cy="76" r="2"/>
+<path class="star" d="m915 148 2-6 2 6 6 2-6 2-2 6-2-6-6-2Z"/><circle class="star" cx="1018" cy="105" r="2.5"/><circle class="star" cx="1080" cy="64" r="1.5"/><path class="star" d="m1272 111 3-8 3 8 8 3-8 3-3 8-3-8-8-3Z"/><circle class="star" cx="1321" cy="226" r="2"/><circle class="star" cx="1371" cy="91" r="2.5"/>
+</g>
 </g>
 
 <!-- Layer 2: cropped rear façades and distant roofs -->
 <g class="rear-town-layer">
+<path d="M90 604 304 354l145 117 188-186 176 165 184-135 162 155 151-120 130 126v128Z" fill="var(--ridge-light)" opacity=".78"/>
+<path d="M210 604 427 405l137 119 188-169 169 175 157-124 186 169 98-76 78 68v37Z" fill="var(--ridge)"/>
 <path d="M0 262h318v370H0Z" fill="var(--far-building)"/><path d="M0 262h318v370H0Z" fill="url(#brick)"/><path d="M0 245h330v24H0Z" fill="var(--roof)"/>
+<g class="radio-tower" fill="none" stroke="var(--tower)" stroke-linecap="round" stroke-linejoin="round">
+<path d="M188 245 220 92l32 153M220 92V70" stroke-width="5"/>
+<path d="M194 218h52M203 173h34M210 141h20M215 116h10" stroke-width="3"/>
+<path d="M194 218 237 173M246 218 203 173M203 173 230 141M237 173 210 141M210 141 225 116M230 141 215 116" stroke-width="3"/>
+<circle class="tower-beacon" cx="220" cy="63" r="7" stroke="none"/>
+</g>
 <path d="M1110 225h330v407h-330Z" fill="var(--far-building-two)"/><path d="M1110 225h330v407h-330Z" fill="url(#siding)"/><path d="M1096 208h344v25h-344Z" fill="var(--roof)"/>
+<g class="chimney"><path d="M1360 155h32v53h-32Z" fill="var(--trim)"/><path d="M1353 148h46v10h-46Z" fill="var(--roof)"/><path d="M1370 139c-8-10 8-15 0-27s8-17 2-28" fill="none" stroke="var(--cloud)" stroke-width="7" stroke-linecap="round" opacity=".38"/></g>
 <g transform="translate(45 308) scale(.72)"><use href="#square-window"/></g><g transform="translate(170 308) scale(.72)"><use href="#square-window"/></g>
 <g transform="translate(1160 280) scale(.74)"><use href="#square-window"/></g><g transform="translate(1285 280) scale(.74)"><use href="#square-window"/></g>
-<path d="M270 560 420 430l126 109 125-91 116 106 108-74 143 124H270Z" fill="var(--ridge)"/>
-<path d="M390 560 504 476l80 72 101-57 80 69Z" fill="var(--ridge-light)"/>
 </g>
 
 <!-- Layer 3: the inhabited street -->
 <g class="street-layer">
 <path d="M0 548h1440v112H0Z" fill="var(--town-ground)"/>
 <path d="M78 420h394v220H78Z" fill="var(--building-one)"/><path d="M78 420h394v220H78Z" fill="url(#brick)"/><path d="M62 402h426v27H62Z" fill="var(--roof)"/>
+<g class="roof-unit" transform="translate(158 365)"><path d="M0 8h78v29H0Z" fill="var(--trim)"/><path d="m0 8 10-8h58l10 8Z" fill="var(--roof)"/><path d="M12 15h54M12 22h54M12 29h54" stroke="var(--line)" stroke-width="3" opacity=".55"/></g>
 <path d="M112 453h182v36H112Z" fill="var(--sign)"/><text x="203" y="477" text-anchor="middle" fill="var(--sign-ink)" font-family="monospace" font-size="14" font-weight="bold" letter-spacing="3">RIVERWOOD GOODS</text>
 <g transform="translate(119 513) scale(.72)"><use href="#square-window"/></g><g transform="translate(253 513) scale(.72)"><use href="#square-window"/></g><path d="M367 502h65v138h-65Z" fill="var(--door)"/><circle cx="418" cy="570" r="5" fill="var(--window)"/>
 
 <path d="M905 391h535v249H905Z" fill="var(--building-three)"/><path d="M905 391h535v249H905Z" fill="url(#brick)"/><path d="M889 374h551v26H889Z" fill="var(--roof)"/>
+<g class="roof-unit" transform="translate(1034 337)"><path d="M0 8h82v29H0Z" fill="var(--trim)"/><path d="m0 8 10-8h62l10 8Z" fill="var(--roof)"/><circle cx="24" cy="23" r="8" fill="none" stroke="var(--line)" stroke-width="3" opacity=".6"/><path d="M45 17h25M45 24h25M45 31h25" stroke="var(--line)" stroke-width="3" opacity=".55"/></g>
 <path d="M949 429h303v38H949Z" fill="var(--sign)"/><text x="1101" y="455" text-anchor="middle" fill="var(--sign-ink)" font-family="monospace" font-size="15" font-weight="bold" letter-spacing="4">THE COMMON ROOM</text>
 <g transform="translate(948 495) scale(.75)"><use href="#arch-window"/></g><g transform="translate(1064 495) scale(.75)"><use href="#arch-window"/></g><g transform="translate(1180 495) scale(.75)"><use href="#arch-window"/></g><g transform="translate(1324 495) scale(.75)"><use href="#arch-window"/></g>
 
@@ -77,10 +90,11 @@
 <g fill="var(--window-frame)" stroke="none"><circle cx="280" cy="409" r="5"/><circle cx="312" cy="409" r="5"/><circle cx="1192" cy="363" r="5"/><circle cx="1224" cy="363" r="5"/></g>
 </g>
 <g class="street-lamp">
-<circle class="lamp-glow" cx="825" cy="432" r="20" fill="var(--window)"/>
+<path class="lamp-cone" d="M817 438h16l32 128h-80Z" fill="url(#lampCone)"/>
+<circle class="lamp-glow" cx="825" cy="434" r="12" fill="var(--window)"/>
 <path d="M862 640V448c0-17-12-27-29-27h-8" fill="none" stroke="var(--wire)" stroke-width="6" stroke-linecap="round"/>
-<path d="M825 410c11 0 16 6 17 21h-34c1-15 6-21 17-21Z" fill="var(--roof)"/>
-<path d="M812 431h26c-2 11-7 17-13 17s-11-6-13-17Z" fill="var(--window)"/>
+<path d="M825 416c8 0 12 4 13 14h-26c1-10 5-14 13-14Z" fill="var(--roof)"/>
+<path class="lamp-bulb" d="M815 430h20c-1 7-5 10-10 10s-9-3-10-10Z"/>
 </g>
 <g class="falling-leaves" fill="var(--leaf)"><path class="fall-leaf leaf-one" d="M148 258c8-11 20-13 28-4-7 12-18 15-28 4Z"/><path class="fall-leaf leaf-two" d="M402 292c7-10 19-12 26-3-6 11-17 14-26 3Z"/><path class="fall-leaf leaf-three" d="M690 244c9-11 21-12 29-2-8 12-20 14-29 2Z"/><path class="fall-leaf leaf-four" d="M910 280c8-10 20-11 27-2-7 11-18 13-27 2Z"/><path class="fall-leaf leaf-five" d="M1188 250c8-11 21-13 29-3-7 12-19 15-29 3Z"/><path class="fall-leaf leaf-six" d="M1350 310c7-10 19-12 26-3-6 11-17 14-26 3Z"/></g>
 </g>
