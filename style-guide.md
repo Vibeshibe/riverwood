@@ -56,7 +56,7 @@ NITW's town feels inhabited through small, constant background motion, not big i
 
 - **Blinking lights** — the radio tower has a slow, irregular blink (not a clean metronomic pulse — real lights drift out of sync).
 - **Traffic and pedestrians** — cars and background characters cross the parallax layers on their own timers, indifferent to the viewer, reinforcing that this is a lived-in place, not a stage set for the visitor.
-- **Parallax depth, always moving slightly** — even without scroll, a barely-perceptible drift in the back layers (clouds, birds, a distant window light flicker) sells "the town keeps going whether you're watching or not."
+- **Broad, readable depth planes** — a sky, one distant land silhouette, a town strip, and a foreground are enough. Clouds, falling leaves, and a distant window flicker can move inside those planes; motion should not require extra scenery layers.
 - Keep all of this *ambient*, never demanding attention — it should reward noticing, not interrupt reading.
 
 ---
@@ -64,6 +64,7 @@ NITW's town feels inhabited through small, constant background motion, not big i
 ## 5. Shape & Motif (carried over, refined)
 
 - Flat silhouettes for rooftops, power lines, hills — unchanged from v1, this was correct.
+- **Town scenes use two to four depth layers maximum.** Compose them like a side-on stage, with a continuous street and large overlapping shapes. Do not build a panoramic stack of mountain ranges, rivers, tree fields, and scattered buildings.
 - **Ground is red-brown at night, not purple** — correct this specifically; the purple was a v1 error.
 - Circles as light sources — porch lights, tower beacons, moons — still correct, now split by palette (amber glow by day, cyan-white glow by night).
 - Border radius stays small (4–8px) for cards, but **title/hero containers use the torn-paper silhouette instead of a rounded rectangle.**
@@ -90,3 +91,20 @@ NITW's town feels inhabited through small, constant background motion, not big i
 - Clean rounded modal/card UI for anything meant to feel diegetic (menus, settings, choices) — these should look hand-made.
 - Perfectly synchronized ambient animation (blinking lights, traffic) — real towns are messier than that.
 - Losing the night palette's electric cyan-on-black-red contrast by softening it into pastel purple.
+
+
+## Riverwood implementation notes
+
+The landing page translates the reference into an original Pacific Northwest town, rather than recreating Possum Springs (a Rust Belt setting). The cover follows the game's side-on, stage-like town compositions using four visual depth planes: a luminous sky, cropped rear façades, an inhabited street, and a level sidewalk and road. Tall buildings enter from the edges instead of forming a distant skyline. Buildings that meet a viewport edge continue beyond it as complete façades; avoid miniature gables or narrow fragments that have no plausible street-level scale. Entrances on the same visual plane share a common baseline and comparable human scale. The central tree uses one continuous, broad canopy mass behind a strongly forked trunk. Its limbs narrow in clear stages—heavy structural branches, medium offshoots, then a few fine terminal twigs—and follow long curves rather than short angular stubs. Sparse leaves sit near selected tips. Slim utility poles carry one naturally sagging cable with small insulators. The fence uses evenly spaced, broad pointed boards, two horizontal rails, sturdy posts, and one braced gate so its silhouette remains legible at mobile size. A high-mounted curved street lamp with a very small head preserves gaps between silhouettes. Together with masonry patterns, cyan daytime windowpanes, properly scaled entrances, simple storefront signs, and a few curved leaves, these details make the street feel close and inhabited.
+
+Cover copy sits over a soft, palette-matched radial haze so the illustration can remain layered without reducing text contrast. The primary “Make yourself at home” button appears only at mobile widths, where the compact layout benefits from an immediate call to action; desktop visitors reach the service choices directly below the cover.
+
+On mobile, avoid shrinking the entire desktop cover into a narrow strip. Give the hero more vertical space, enlarge the town illustration beyond the viewport width, and crop its outer façades deliberately. Keep the copy in a clear upper region and the town in a dedicated lower region. Mobile uses one continuous CSS sky across the whole hero; hide the SVG's duplicate sky while retaining its sun, stars, buildings, and street. Let the illustration overflow its internal town region so tall branches are never clipped at an artificial horizontal boundary. The single background light uses an oversized radial gradient that fades beyond the text area without visible seams.
+
+The visual review draws on the game's environmental compositions and the creators’ discussion of building a town that feels like home: [Road to the IGF: Infinite Fall’s Night in the Woods](https://www.gamedeveloper.com/business/road-to-the-igf-infinite-fall-s-i-night-in-the-woods-i-) and [Scott Benson’s GDC design postmortem](https://www.gdcvault.com/play/1024984/Nuke-Possum-Springs-A-Night). Design choices here are our interpretation, not official game guidelines.
+
+For Riverwood, use Fraunces for expressive, slightly irregular editorial headlines and DM Sans for readable navigation and body text, with Georgia/sans-serif fallbacks. Keep the main reading surface calm; reserve illustrative detail for the cover. Day commits to a late-autumn palette: burnt-orange sky, brick red buildings and ground, plum silhouettes, cream signs, and golden windows. Night commits to the guide's electric contrast: near-black and navy sky, cyan highlights, warm windows, and red-brown ground. Purple belongs in the day scene only as a shadow color, rather than becoming a dusk background.
+
+The system color preference applies on first visit. A pill switch in the cover's top-right corner stores an explicit choice locally; the Riverwood mark sits alone in the opposite corner, without a separate header. Night mode changes the windowpanes from cool cyan to warm amber and adds a restrained glow. Theme changes take less than a second; a multi-minute transition would delay a functional control. A handful of curved leaves fall on separate timings and paths, while night stars move independently; reduced-motion preferences disable animation and leave a few leaves resting in place.
+
+Implementation: static index.html, styles.css, and script.js; no build step. Original SVG scenery remains editable and recolors with CSS variables. Google Fonts is optional; fallback fonts keep the page usable if unavailable. Service URLs are centralized in script.js and also supplied as HTML fallbacks. The site explains existing shared authentication; it does not implement the authentication backend.
