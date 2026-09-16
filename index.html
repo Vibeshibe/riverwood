@@ -4,6 +4,24 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A little town on the open internet. Join Riverwood for federated social conversations on Mastodon and community chat on Matrix. One account, two ways to connect.">
 <meta name="theme-color" content="#f3dfb8">
+<link rel="canonical" href="https://riverwood.town/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Riverwood — A little town on the open internet">
+<meta property="og:description" content="A small, welcoming corner of the fediverse with Mastodon and Matrix. One account, two ways to connect.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://riverwood.town/">
+<meta property="og:site_name" content="Riverwood">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://riverwood.town/social-preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Riverwood's warm autumn town beneath the headline: The internet feels better together.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Riverwood — A little town on the open internet">
+<meta name="twitter:description" content="A small, welcoming corner of the fediverse with Mastodon and Matrix. One account, two ways to connect.">
+<meta name="twitter:image" content="https://riverwood.town/social-preview.png">
+<meta name="twitter:image:alt" content="Riverwood's warm autumn town beneath the headline: The internet feels better together.">
 <title>Riverwood — A little town on the open internet</title>
 <script>try{const t=localStorage.getItem('riverwood-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="styles.css">
@@ -13,7 +31,7 @@
 <main id="main">
 <section class="hero" aria-labelledby="hero-title">
 <div class="hero-bar"><a class="brand" href="#" aria-label="Riverwood home"><svg viewBox="0 0 34 36" aria-hidden="true"><path d="M17 1 6 17h6L2 29h12v6h6v-6h12L22 17h6Z" fill="currentColor"/></svg>riverwood<span>.town</span></a><button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to night mode" title="Switch to night mode"><span class="toggle-thumb" aria-hidden="true"></span></button></div>
-<div class="hero-copy"><div class="eyebrow"><span></span> A SMALL CORNER OF THE FEDIVERSE</div><h1 id="hero-title">The internet feels<br>better <em>together.</em></h1><p>A little town between the mountains and the trees.<br> A place to share your days, find your people, and stay awhile.</p><a class="button primary" href="#services">Make yourself at home <span aria-hidden="true">↗</span></a><div class="hero-note">Independent spirits. Connected by nature.</div></div>
+<div class="hero-copy"><h1 id="hero-title">The internet feels<br>better <em>together.</em></h1><p>A little town between the mountains and the trees.<br> A place to share your days, find your people, and stay awhile.</p><a class="button primary" href="#services">Make yourself at home <span aria-hidden="true">↗</span></a><div class="hero-note">Independent spirits. Connected by nature.</div></div>
 <div class="landscape"><svg id="town" viewBox="0 0 1440 710" preserveAspectRatio="xMidYMax slice" role="img" aria-label="A close, layered autumn street with tall buildings, a bare tree, power lines and glowing windows">
 <defs>
 <linearGradient id="sky" x2="0" y2="1"><stop stop-color="var(--sky-top)"/><stop offset="1" stop-color="var(--sky-bottom)"/></linearGradient>
@@ -74,6 +92,7 @@
 <path d="M773 608 866 529l6 7-93 79Z" opacity=".72"/>
 </g>
 
+<g class="tree-composition" transform="translate(56 64) scale(.9)">
 <g class="tree-canopy" fill="var(--tree-canopy)"><path d="M287 304c0-58 49-105 109-105 19 0 38 5 54 14 27-60 84-99 151-99 74 0 137 49 157 117 58 2 104 47 104 103 0 59-50 107-112 107-38 0-72-18-92-46-30 28-70 45-115 45-53 0-100-24-130-60-17 14-40 23-65 23-56 0-101-44-101-99Z"/></g>
 <g class="tree" fill="none" stroke="var(--tree)" stroke-linecap="round" stroke-linejoin="round">
 <path d="M548 640c-4-72 3-132 30-184 20-39 29-76 24-112" stroke-width="40"/>
@@ -82,6 +101,7 @@
 <path d="M377 324c-31 1-57-7-81-24M406 226c-15-18-32-31-54-38M573 243c15-23 35-40 59-52M662 329c27-4 50-17 68-38M755 301c26 3 49-4 69-20M705 184c-13-27-16-53-9-79" stroke-width="6"/>
 </g>
 <g class="tree-leaves" fill="var(--leaf)"><path d="M287 279c10-9 22-8 28 3-9 10-21 10-28-3Zm57-97c10-9 22-8 28 3-9 10-21 10-28-3Zm36 112c10-9 22-8 28 3-9 10-21 10-28-3Zm164-124c10-9 22-8 28 3-9 10-21 10-28-3Zm77 14c10-9 22-8 28 3-9 10-21 10-28-3Zm142-80c10-9 22-8 28 3-9 10-21 10-28-3Zm-14 188c10-9 22-8 28 3-9 10-21 10-28-3Zm86-55c10-9 22-8 28 3-9 10-21 10-28-3Z"/></g>
+</g>
 
 <g class="power-lines" fill="none" stroke="var(--wire)" stroke-linecap="round">
 <path d="M296 352v288M1208 307v333" stroke-width="9"/>
@@ -113,8 +133,8 @@
 <a class="service-card mastodon" data-service="mastodon" href="https://social.riverwood.town"><div class="card-top"><span class="service-icon" aria-hidden="true">m</span><span class="card-label">THE TOWN SQUARE</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Mastodon</h3><p>Small updates. Big conversations. Share what’s on your mind and follow interesting people across the fediverse.</p><div class="card-bottom"><span>Step into the square <span aria-hidden="true">↗</span></span><span>Social, at your pace.</span></div></a>
 <a class="service-card matrix" data-service="matrix" href="https://chat.riverwood.town"><div class="card-top"><span class="service-icon matrix-icon" aria-hidden="true">[m]</span><span class="card-label">THE COZY BACK ROOM</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Matrix</h3><p>Keep the conversation going. Find a room, catch up with friends, and settle into a chat that feels like home.</p><div class="card-bottom"><span>Pull up a chair <span aria-hidden="true">↗</span></span><span>Your Mastodon login works here.</span></div></a>
 </div><div class="account-note"><span aria-hidden="true">⌁</span> New around here? <a data-service="signup" href="https://social.riverwood.town/auth/sign_up">Create your Mastodon account</a><span>— then use it to sign in to Matrix.</span></div></section>
-<section class="about section" id="about" aria-labelledby="about-title"><div class="about-title"><div class="eyebrow">ROOTED HERE. CONNECTED EVERYWHERE.</div><h2 id="about-title">A small town.<br>An open world.</h2><span class="handwritten">A good place to put down roots. ↗</span></div><div class="about-copy"><p class="lead">The internet can still feel like a neighborhood.</p><p>Riverwood is a little gathering place on the federated web. Somewhere for everyday thoughts, shared interests, and conversations that wander in the best possible way.</p><p>Our Mastodon and Matrix instances connect to a much bigger world of independent communities. You can make a home here and still keep in touch with people beyond the tree line.</p><div class="values"><span>↗ Open by nature</span><span>⌂ A place for people</span><span>♧ Better together</span></div></div></section>
+<section class="about section" id="about" aria-labelledby="about-title"><div class="about-title"><div class="eyebrow">ROOTED HERE. CONNECTED EVERYWHERE.</div><h2 id="about-title">A small town.<br>An open world.</h2><span class="handwritten">A good place to put down roots. ↗</span></div><div class="about-copy"><p class="lead">The internet can still feel like a neighborhood.</p><p>Riverwood is a little gathering place on the federated web. Somewhere for everyday thoughts, shared interests, and conversations that wander in the best possible way.</p><p>Our Mastodon and Matrix instances connect to a much bigger world of independent communities. You can make a home here and still keep in touch with people beyond the tree line.</p><p>Riverwood came from a longstanding inspiration from the Longest Night universe. We give our best to reflect that vibe and welcome anyone who shares the same sentiment.</p><div class="values"><span>↗ Open by nature</span><span>⌂ A place for fluffy critters</span><span>♧ Better together</span></div></div></section>
 <div class="closing"><span aria-hidden="true">✦</span> There’s a light on for you here. <span aria-hidden="true">✦</span></div>
-</main><footer><a class="brand" href="#">riverwood<span>.town</span></a><p>A little less noise. A little more neighborhood.</p><a href="#services">See you around town ↗</a></footer>
+</main><footer><a class="brand" href="#">riverwood<span>.town</span></a><p>For furries, by furries.</p><a href="#services">See you around town ↗</a></footer>
 <script src="script.js"></script>
 </body></html>
