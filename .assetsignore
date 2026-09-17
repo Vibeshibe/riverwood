@@ -1,0 +1,7 @@
+.agents/
+.codex/
+.git/
+functions/
+worker.js
+wrangler.jsonc
+style-guide.md
