@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "include": [
+    "/.well-known/webfinger",
+    "/.well-known/host-meta",
+    "/.well-known/nodeinfo"
+  ],
+  "exclude": []
+}

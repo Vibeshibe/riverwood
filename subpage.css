@@ -1,0 +1,42 @@
+.subpage-body{min-height:100vh;background:var(--paper)}
+.subpage-header{position:relative;z-index:2;max-width:1320px;height:92px;margin:0 auto;padding:22px 48px;display:flex;align-items:center;gap:36px;border-bottom:1px solid var(--line)}
+.subpage-header .brand{margin-right:auto}
+.subpage-nav{margin-left:0;display:flex;align-items:center;gap:26px;font-size:12px;font-weight:600}
+.subpage-nav a[aria-current=page]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px}
+.subpage-header .theme-toggle{color:var(--ink);border-color:color-mix(in srgb,var(--ink) 42%,transparent);background:color-mix(in srgb,var(--card) 55%,transparent)}
+.subpage-header .toggle-thumb{background:var(--ink)}
+.page-main{max-width:1080px;margin:0 auto;padding:84px 48px 110px}
+.page-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:78px;align-items:end;padding-bottom:55px;border-bottom:1px solid var(--line)}
+.page-intro h1{max-width:700px;margin:15px 0 0;font-size:clamp(52px,7vw,86px);line-height:.98;letter-spacing:-4px}
+.page-intro-copy{max-width:440px;margin:0 0 5px;color:var(--muted);font-size:15px;line-height:1.85}
+.page-intro-copy strong{color:var(--ink)}
+.content-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:70px;padding-top:64px}
+.page-toc{align-self:start;position:sticky;top:30px;padding:22px 0;border-top:3px solid var(--ink);border-bottom:1px solid var(--line)}
+.page-toc h2{font-family:inherit;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:13px}
+.page-toc nav{margin:0;display:grid;gap:8px;font-size:12px}
+.page-toc a{color:var(--muted)}
+.page-toc a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.prose{min-width:0}
+.prose section{scroll-margin-top:30px;padding:0 0 45px;margin:0 0 45px;border-bottom:1px solid var(--line)}
+.prose section:last-child{margin-bottom:0;border-bottom:0}
+.prose h2{font-size:34px;letter-spacing:-1px;margin:0 0 22px}
+.prose h3{font-family:inherit;font-size:12px;line-height:1.5;letter-spacing:1.4px;text-transform:uppercase;margin:28px 0 8px}
+.prose p,.prose li{color:var(--muted);font-size:14px;line-height:1.85}
+.prose p{margin:0 0 16px}
+.prose ul{margin:12px 0 18px;padding-left:20px}
+.prose li+li{margin-top:7px}
+.prose a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;color:var(--ink)}
+.prose strong{color:var(--ink)}
+.legal-address{font-style:normal;color:var(--muted);line-height:1.85}
+.legal-address strong{display:block;color:var(--ink);font-family:'Fraunces',Georgia,serif;font-size:20px;margin-bottom:7px}
+.info-notice{margin:24px 0;padding:20px 22px;border:1px solid var(--line);border-left:5px solid var(--leaf);background:color-mix(in srgb,var(--card) 58%,transparent);color:var(--muted);font-size:13px;line-height:1.7}
+.info-notice strong{color:var(--ink)}
+.fact-list{display:grid;grid-template-columns:150px minmax(0,1fr);margin:22px 0;border-top:1px solid var(--line)}
+.fact-list dt,.fact-list dd{margin:0;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.65}
+.fact-list dt{font-weight:700;color:var(--ink)}
+.fact-list dd{color:var(--muted)}
+.legal-sources{font-size:12px!important}
+.subpage-footer{border-top:1px solid var(--line)}
+@media(max-width:800px){.subpage-header{height:78px;padding:16px 25px}.page-main{padding:60px 25px 80px}.page-intro{gap:38px}.content-grid{grid-template-columns:180px minmax(0,1fr);gap:42px}}
+@media(max-width:640px){.subpage-header{padding:14px 20px;gap:15px}.subpage-header .brand{font-size:20px}.subpage-header .brand svg{width:19px;margin-right:7px}.subpage-nav{gap:13px;font-size:10px}.subpage-nav a:first-child{display:none}.page-main{padding:48px 20px 70px}.page-intro{grid-template-columns:1fr;gap:28px;padding-bottom:38px}.page-intro h1{font-size:clamp(48px,16vw,68px);letter-spacing:-3px}.page-intro-copy{font-size:14px}.content-grid{display:block;padding-top:0}.page-toc{position:static;margin-bottom:45px}.page-toc nav{grid-template-columns:1fr 1fr}.prose h2{font-size:30px}.fact-list{grid-template-columns:1fr}.fact-list dt{padding-bottom:2px;border-bottom:0}.fact-list dd{padding-top:0}.subpage-footer{padding:28px 20px}}
+@media(max-width:430px){.subpage-nav a{display:none}.page-toc nav{grid-template-columns:1fr}}

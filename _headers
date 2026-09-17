@@ -1,0 +1,13 @@
+/.well-known/matrix/client
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/matrix/server
+  Cache-Control: public, max-age=86400
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/matrix/support
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+  Content-Type: application/json; charset=utf-8

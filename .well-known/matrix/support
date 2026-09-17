@@ -1,0 +1,13 @@
+{
+  "contacts": [
+    {
+      "email_address": "hello@riverwood.town",
+      "role": "m.role.admin"
+    },
+    {
+      "email_address": "privacy@riverwood.town",
+      "role": "m.role.security"
+    }
+  ],
+  "support_page": "https://riverwood.town/about.html"
+}
